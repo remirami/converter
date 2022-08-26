@@ -141,6 +141,29 @@ def convertDltoCup():
             break
         except ValueError:
             print("That is not a proper value! Try again.")
+def convertLbstoKg():
+    while True:
+        try:
+            l = 0.45359237
+            s = float(input("Give lbs amount: "))
+            k = (float(s) * l)
+            lbs_format = "{:.2f}".format(k)
+            print(lbs_format, "kg")
+            break
+        except ValueError:
+            print("That is not a proper value! Try again.")
+
+def convertKgtoLbs():
+    while True:
+        try:
+            kg = 2.20462262
+            s = float(input("Give kilogram amount: "))
+            k = (float(s) * kg)
+            kg_format = "{:.2f}".format(k)
+            print(kg_format, "lbs")
+            break
+        except ValueError:
+            print("That is not a proper value! Try again.")
 print("/////////////////////////")
 print("/////////////////////////")
 
@@ -158,7 +181,9 @@ while True:
     print("10. Inches to Feet")
     print("11. Cup to Deciliter")
     print("12. Deciliter to Cup")
-    print("13. Exit")
+    print("13. Pounds to Kilograms")
+    print("14. Kilograms to Pounds")
+    print("15. Exit")
 
     print("/////////////////////////")
     print("/////////////////////////")
@@ -202,6 +227,12 @@ while True:
         elif choice == 12:
             print("You chose convert Deciliter to Cups")
             convertDltoCup()
+        elif choice == 13:
+            print("You chose convert Pounds to Kilograms")
+            convertLbstoKg()
+        elif choice == 14:
+            print("You chose convert Kilograms to Pounds")
+            convertKgtoLbs()
         else:
             break
     except ValueError:
